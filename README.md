@@ -93,5 +93,11 @@ git rebase main         // branch1 comes ahead main
 
 ```bash
 git reset --hard origin/main        // rewrites history
-git revert --hard origin/main       // creates a new commit to undo changes
+git revert commit-hash       // creates a new commit to undo changes
 ```
+
+git reset --soft A, will change the commit history and repository; staging and working directory will still be at state of C.
+
+git reset --mixed A, will change the commit history, repository, and staging; working directory will still be at state of C.
+
+git reset --hard A, will change the commit history, repository, staging and working directory; you will go back to the state of A completely.
