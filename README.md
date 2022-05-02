@@ -94,4 +94,3 @@ git rebase main         // branch1 comes ahead main
 ```bash
 git reset --hard origin/main
 ```
-aaa
