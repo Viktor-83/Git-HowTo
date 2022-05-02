@@ -1,5 +1,7 @@
 # Test Repo - for training purpose only
 
+[Git-CheatSheet.pdf](./github-git-cheat-sheet.pdf)
+
 ## BEGIN
 
 ### General info
@@ -40,6 +42,10 @@ git clone git@github.com:Peanuts-83/Git-test.git
 git submodule add git@github.com:Peanuts-83/Git-test.git
 ```
 
+### Remove a submodule
+
+[Check HowTo here](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/36593218#36593218)
+
 ### Commit all & push
 
 ```bash
@@ -58,6 +64,7 @@ git checkout branchName fileOrDirName
 
 ## BRANCHES
 
+[https://learngitbranching.js.org](https://learngitbranching.js.org)
 ### CREATE branch & go on it
 
 ```bash
