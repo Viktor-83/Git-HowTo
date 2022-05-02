@@ -33,8 +33,19 @@ git submodule add git@github.com:Peanuts-83/Git-test.git
 ### Commit all & push
 
 ```bash
+git status
 git add .
 git commit -m'Name of the commit'
 git push
 ```
 
+## BRANCHES
+
+### Create branch & go on it
+
+```bash
+git branch branchName
+git checkout branchName
+// or short command
+git checkout -b branchName
+```
