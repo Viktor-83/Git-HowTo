@@ -1,4 +1,4 @@
-# Test Repo - for training purpose only
+# HowTo use GitHub - for Learning purpose
 
 [Git-CheatSheet.pdf](./github-git-cheat-sheet.pdf)
 
