@@ -92,5 +92,6 @@ git rebase main         // branch1 comes ahead main
 ### UNDO changes if remote is still ok
 
 ```bash
-git reset --hard origin/main
+git reset --hard origin/main        // rewrites history
+git revert --hard origin/main       // creates a new commit to undo changes
 ```
