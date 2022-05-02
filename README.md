@@ -77,9 +77,9 @@ git cherry-pick branch1 branch2 de9a6fb // branch or commit names
 
 ### MERGE branch
 
-Merged branch ends to merge point. It comes to HEAD and overwrites it. Original branches remain the same.
+Merged branch ends to merge point. Original branches remain the same.
 
-**CAUTION** : Non existing files on merged branch are deleted on HEAD branch!
+**CAUTION** : Deleted common files on any branch are deleted!
 
 ```bash
 git checkout main
