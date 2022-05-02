@@ -48,6 +48,14 @@ git commit -m'Name of the commit'
 git push
 ```
 
+## FILES & DIR
+
+### COPY file or dir from another branch
+
+```bash
+git checkout branchName fileOrDirName
+```
+
 ## BRANCHES
 
 ### CREATE branch & go on it
