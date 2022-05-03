@@ -62,6 +62,14 @@ git push
 git checkout branchName fileOrDirName
 ```
 
+### REMOVE file or dir only on remote
+
+```bash
+git rm --cached fileName
+git commit -m'fileName removed'
+git push
+```
+
 ## BRANCHES
 
 [https://learngitbranching.js.org](https://learngitbranching.js.org)
