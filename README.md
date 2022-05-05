@@ -89,7 +89,13 @@ git branch -u origin/production
 
 ### Remove a submodule
 
-[Check HowTo here](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/36593218#36593218)
+ref : https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/36593218#36593218
+
+```bash
+git submodule deinit -f <pathToSubmodule>
+rm -rf .git/modules/<pathToSubmodule>
+git rm -f <pathToSubmodule>
+```
 
 ## FILES & DIR
 
