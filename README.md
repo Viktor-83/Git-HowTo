@@ -52,6 +52,7 @@ git push
 
 ```bash
 git push origin production:master
+```
 
 ## SUBMODULES
 
