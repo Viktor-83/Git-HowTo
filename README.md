@@ -71,6 +71,21 @@ git clone --recurse-submodules git@github.com:Peanuts-83/Git-test.git
 git submodule update --init --recursive
 ```
 
+### TRACK a specific branch on submodule repo
+
+ref : https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule
+
+Make sure parent repo knows its submodule tracks a branch
+
+```bash
+git config -f .gitmodules submodule.<path>.branch <branch>
+git config -f .gitmodules submodule.front.branch production
+```
+Target right branch in your submodule folder (here my *main* submodule branch will follow remote *production* branch) 
+
+```bash
+git branch -u origin/production
+```
 
 ### Remove a submodule
 
