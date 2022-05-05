@@ -23,7 +23,7 @@ git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:Peanuts-83/Git-test.git
-git push -u origin main  // -u = --set-upstream
+git push -u origin main  // -u = --set-upstream // origin = distant repoName // main = distant branchName
 ```
 
 ### Push an existing repo
@@ -38,6 +38,14 @@ git push -u origin main
 
 ```bash
 git clone git@github.com:Peanuts-83/Git-test.git
+```
+
+### Commit all & push
+
+```bash
+git add .
+git commit -m'Name of the commit'
+git push
 ```
 
 ## SUBMODULES
@@ -67,14 +75,6 @@ git submodule update --init --recursive
 ### Remove a submodule
 
 [Check HowTo here](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/36593218#36593218)
-
-### Commit all & push
-
-```bash
-git add .
-git commit -m'Name of the commit'
-git push
-```
 
 ## FILES & DIR
 
