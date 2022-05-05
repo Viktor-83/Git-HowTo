@@ -48,6 +48,11 @@ git commit -m'Name of the commit'
 git push
 ```
 
+### Push remoteRepo choosing local:remote branch
+
+```bash
+git push origin production:master
+
 ## SUBMODULES
 
 ref : https://git-scm.com/book/fr/v2/Utilitaires-Git-Sous-modules
