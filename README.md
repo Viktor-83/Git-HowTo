@@ -34,13 +34,35 @@ git branch -M main
 git push -u origin main
 ```
 
-### Import code from another repo
+### Import a repo (if submodules inside, only submodules ref, no submodule files imported)
 
 ```bash
 git clone git@github.com:Peanuts-83/Git-test.git
-// or add repo in another repo
-git submodule add git@github.com:Peanuts-83/Git-test.git
 ```
+
+## SUBMODULES
+
+ref : https://git-scm.com/book/fr/v2/Utilitaires-Git-Sous-modules
+
+### Add a repo (submodule) to another repo
+
+```bash
+git submodule add git@github.com:Peanuts-83/Git-test.git
+git submodule add git@github.com:Peanuts-83/Git-test.git folderName     // optional
+```
+
+### Import a repo with submodules content files
+
+```bash
+git clone --recurse-submodules git@github.com:Peanuts-83/Git-test.git
+```
+
+### Import submodules content files AFTER basic git clone repo (forgot --recursive-submodules option)
+
+```bash
+git submodule update --init --recursive
+```
+
 
 ### Remove a submodule
 
