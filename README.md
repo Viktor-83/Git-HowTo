@@ -134,6 +134,16 @@ git checkout branch1
 git rebase main         // branch1 comes ahead main
 ```
 
+### DELETE branch
+
+Places HEAD branch on other branch before deleting.
+
+**CAUTION** : Do not use on public branch used by others!
+
+```bash
+git branch -d <branchName>
+```
+
 ### UNDO changes if remote is still ok
 
 ```bash
