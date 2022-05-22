@@ -48,6 +48,12 @@ git commit -m'Name of the commit'
 git push
 ```
 
+### Push remoteRepo choosing local:remote branch
+
+```bash
+git push origin production:master
+```
+
 ## SUBMODULES
 
 ref : https://git-scm.com/book/fr/v2/Utilitaires-Git-Sous-modules
@@ -71,10 +77,31 @@ git clone --recurse-submodules git@github.com:Peanuts-83/Git-test.git
 git submodule update --init --recursive
 ```
 
+### TRACK a specific branch on submodule repo
+
+ref : https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule
+
+Make sure parent repo knows its submodule tracks a branch
+
+```bash
+git config -f .gitmodules submodule.<path>.branch <branch>
+git config -f .gitmodules submodule.front.branch production
+```
+Target right branch in your submodule folder (here my *main* submodule branch will follow remote *production* branch) 
+
+```bash
+git branch -u origin/production
+```
 
 ### Remove a submodule
 
-[Check HowTo here](https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/36593218#36593218)
+ref : https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/36593218#36593218
+
+```bash
+git submodule deinit -f <pathToSubmodule>
+rm -rf .git/modules/<pathToSubmodule>
+git rm -f <pathToSubmodule>
+```
 
 ## FILES & DIR
 
