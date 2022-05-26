@@ -24,6 +24,7 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:Peanuts-83/Git-test.git
 git push -u origin main  // -u = --set-upstream // origin = distant repoName // main = distant branchName
+git remote add new_remote@github.com:Peanuts-83/new_space_name.git
 ```
 
 ### Push an existing repo
@@ -87,7 +88,7 @@ Make sure parent repo knows its submodule tracks a branch
 git config -f .gitmodules submodule.<path>.branch <branch>
 git config -f .gitmodules submodule.front.branch production
 ```
-Target right branch in your submodule folder (here my *main* submodule branch will follow remote *production* branch) 
+Target right branch in your submodule folder (here my *main* submodule branch will follow remote *production* branch)
 
 ```bash
 git branch -u origin/production
