@@ -55,6 +55,14 @@ git push
 git push origin production:master
 ```
 
+### Undelete local files (after error)
+
+Deleted files will be restored IF they have been previously validated in Git.
+
+```bash
+git ls-files -d | xargs git checkout
+```
+
 ## SUBMODULES
 
 ref : https://git-scm.com/book/fr/v2/Utilitaires-Git-Sous-modules
