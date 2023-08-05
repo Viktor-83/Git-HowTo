@@ -152,6 +152,7 @@ Merged branch ends to merge point. Original branches remain the same.
 Get merged branch to new commit on active branch.&nbsp;
 
 main:       A--B--C          main:    A--B--C--F &nbsp;
+
 branch2 :     \D--E          branch2:   \D--E/ &nbsp;
 
 **CAUTION** : Deleted common files on any branch are deleted!
@@ -167,6 +168,7 @@ Places HEAD branch ahead rebased branch. Original branches are changed, history 
 Destroys active branch to put it ahead on rebased branch.&nbsp;
 
 main:       A--B--C          main:    A--B--C--D--E &nbsp;
+
 branch2 :     \D--E          branch2: no more &nbsp;
 
 **CAUTION** : Do not use on public branch used by others!
