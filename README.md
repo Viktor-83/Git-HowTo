@@ -151,15 +151,14 @@ git cherry-pick branch1 branch2 de9a6fb // branch or commit names
 Merged branch ends to merge point. Original branches remain the same.
 Get merged branch to new commit on active branch.&nbsp;
 
-main:       A--B--C          main:    A--B--C--F &nbsp;
-
-branch2 :     \D--E          branch2:   \D--E/ &nbsp;
-
 **CAUTION** : Deleted common files on any branch are deleted!
 
 ```bash
 git checkout main
 git merge branch2       // branch2 comes to main in new commit ahead last commit on main
+
+main:       A--B--C          main:    A--B--C--F 
+branch2 :     \D--E          branch2:   \D--E/ 
 ```
 
 ### REBASE branch
@@ -167,15 +166,14 @@ git merge branch2       // branch2 comes to main in new commit ahead last commit
 Places HEAD branch ahead rebased branch. Original branches are changed, history rewritten...
 Destroys active branch to put it ahead on rebased branch.&nbsp;
 
-main:       A--B--C          main:    A--B--C--D--E &nbsp;
-
-branch2 :     \D--E          branch2: no more &nbsp;
-
 **CAUTION** : Do not use on public branch used by others!
 
 ```bash
 git checkout branch1
 git rebase main         // branch1 comes ahead main
+
+main:       A--B--C          main:    A--B--C--D--E
+branch2 :     \D--E          branch2: no more
 ```
 
 ### DELETE branch
