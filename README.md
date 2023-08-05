@@ -151,8 +151,8 @@ git cherry-pick branch1 branch2 de9a6fb // branch or commit names
 Merged branch ends to merge point. Original branches remain the same.
 Get merged branch to new commit on active branch.&nbsp;
 
-main:       A--B--C          main:    A--B--C--F
-branch2 :     \D--E          branch2:   \D--E/
+main:       A--B--C          main:    A--B--C--F &nbsp;
+branch2 :     \D--E          branch2:   \D--E/ &nbsp;
 
 **CAUTION** : Deleted common files on any branch are deleted!
 
@@ -166,8 +166,8 @@ git merge branch2       // branch2 comes to main in new commit ahead last commit
 Places HEAD branch ahead rebased branch. Original branches are changed, history rewritten...
 Destroys active branch to put it ahead on rebased branch.&nbsp;
 
-main:       A--B--C          main:    A--B--C--D--E
-branch2 :     \D--E          branch2: no more
+main:       A--B--C          main:    A--B--C--D--E &nbsp;
+branch2 :     \D--E          branch2: no more &nbsp;
 
 **CAUTION** : Do not use on public branch used by others!
 
@@ -194,8 +194,8 @@ git revert <commit-hash>       // creates a new commit to undo changes made by s
 ```
 From commit C:&nbsp;
 
-git reset --soft A   // will move HEAD and branch to commit A; staging and working directory will still be at state of C.
+git reset --soft A   // will move HEAD and branch to commit A; staging and working directory will still be at state of C.&nbsp;
 
-git reset --mixed A  // will move HEAD and branch to commit A, and staging; working directory will still be at state of C.
+git reset --mixed A  // will move HEAD and branch to commit A, and staging; working directory will still be at state of C.&nbsp;
 
 git reset --hard A  // will move HEAD and branch to commit A, staging and working directory; you will go back to the state of A completely.
