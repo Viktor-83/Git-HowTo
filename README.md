@@ -11,27 +11,25 @@ git status
 git reflog      // see any action made by user!
 git log         // see commits on branch
 git branch      // see branches
-git remote -v   // see remote url
+git remote -v   // see remote url // -vv for more details
 ```
 
 ### Create new repo
+git should be configured to get "main" brach by default
 
 ```bash
 echo "# Git-test" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git branch -M main
 git remote add origin git@github.com:Peanuts-83/Git-test.git
-git push -u origin main  // -u = --set-upstream // origin = distant repoName // main = distant branchName
-git remote add new_remote@github.com:Peanuts-83/new_space_name.git
+git push -u origin/main  // -u = --set-upstream-to=origin/main   // origin = remote-repo-url // main = remote-branch
 ```
 
 ### Push an existing repo
 
 ```bash
 git remote add origin git@github.com:Peanuts-83/Git-test.git
-git branch -M main
 git push -u origin main
 ```
 
@@ -45,7 +43,7 @@ git clone git@github.com:Peanuts-83/Git-test.git
 
 ```bash
 git add .
-git commit -m'Name of the commit'
+git commit -m 'commit message'
 git push
 ```
 
@@ -151,17 +149,25 @@ git cherry-pick branch1 branch2 de9a6fb // branch or commit names
 ### MERGE branch
 
 Merged branch ends to merge point. Original branches remain the same.
+Get merged branch to new commit on active branch.&nbsp;
+
+main:       A--B--C          main:    A--B--C--F
+branch2 :     \D--E          branch2:   \D--E/
 
 **CAUTION** : Deleted common files on any branch are deleted!
 
 ```bash
 git checkout main
-git merge branch2       //
+git merge branch2       // branch2 comes to main in new commit ahead last commit on main
 ```
 
 ### REBASE branch
 
 Places HEAD branch ahead rebased branch. Original branches are changed, history rewritten...
+Destroys active branch to put it ahead on rebased branch.&nbsp;
+
+main:       A--B--C          main:    A--B--C--D--E
+branch2 :     \D--E          branch2: no more
 
 **CAUTION** : Do not use on public branch used by others!
 
@@ -177,18 +183,19 @@ Places HEAD branch on other branch before deleting.
 **CAUTION** : Do not use on public branch used by others!
 
 ```bash
-git branch -d <branchName>
+git branch -d <branchName>  // -D for delet --force
 ```
 
-### UNDO changes if remote is still ok
-
+### UNDO changes, only on local repo
 ```bash
-git reset --hard origin/main        // rewrites history
-git revert commit-hash       // creates a new commit to undo changes
+git reset                      // clear staging area
+git reset <file>               // clear file from staging area
+git revert <commit-hash>       // creates a new commit to undo changes made by selected commit
 ```
+From commit C:&nbsp;
 
-git reset --soft A, will change the commit history and repository; staging and working directory will still be at state of C.
+git reset --soft A   // will move HEAD and branch to commit A; staging and working directory will still be at state of C.
 
-git reset --mixed A, will change the commit history, repository, and staging; working directory will still be at state of C.
+git reset --mixed A  // will move HEAD and branch to commit A, and staging; working directory will still be at state of C.
 
-git reset --hard A, will change the commit history, repository, staging and working directory; you will go back to the state of A completely.
+git reset --hard A  // will move HEAD and branch to commit A, staging and working directory; you will go back to the state of A completely.
