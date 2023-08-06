@@ -42,11 +42,13 @@ git clone git@github.com:Peanuts-83/Git-test.git
 ### Commit all & push
 
 ```bash
+git status
 git add .
 git commit -m 'commit message'
 git push
 ```
 
+<<<<<<< HEAD
 ### Push remoteRepo choosing local:remote branch
 
 ```bash
@@ -130,6 +132,11 @@ git push
 
 [https://learngitbranching.js.org](https://learngitbranching.js.org)
 ### CREATE branch & go on it
+=======
+## BRANCHES
+
+### Create branch & go on it
+>>>>>>> 05312000ee67288ec57624deaf70634999b5b63c
 
 ```bash
 git branch branchName
@@ -137,6 +144,7 @@ git checkout branchName
 // or short command
 git checkout -b branchName
 ```
+<<<<<<< HEAD
 
 ### COPY branch or commit under HEAD
 
@@ -199,3 +207,5 @@ git reset --soft A   // will move HEAD and branch to commit A; staging and worki
 git reset --mixed A  // will move HEAD and branch to commit A, and staging; working directory will still be at state of C.&nbsp;
 
 git reset --hard A  // will move HEAD and branch to commit A, staging and working directory; you will go back to the state of A completely.
+=======
+>>>>>>> 05312000ee67288ec57624deaf70634999b5b63c
