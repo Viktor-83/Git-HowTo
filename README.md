@@ -10,7 +10,7 @@
 git status
 git reflog      // see any action made by user!
 git log         // see commits on branch
-git branch      // see branches
+git branch -avv // see all branches
 git remote -v   // see remote url // -vv for more details
 ```
 
@@ -23,6 +23,7 @@ git init
 git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:Peanuts-83/Git-test.git
+git fetch                // get all remote branches & history commits
 git push -u origin/main  // -u = --set-upstream-to=origin/main   // origin = remote-repo-url // main = remote-branch
 ```
 
